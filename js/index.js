@@ -41,8 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.src = siteContent['nav']['img-src'];
 
-let ctaimage = document.querySelector('#cta-img');
-ctaimage.src = siteContent['cta']['img-src'];
+let middleimage = document.querySelector('#cta-img');
+middleimage.src = siteContent['cta']['img-src'];
+
+let mainimage = document.querySelector('#middle-img');
+mainimage.src = siteContent['main-content']['middle-img-src'];
 
 let navigation = document.querySelectorAll('nav a');
 navigation[0].innerHTML = siteContent.nav['nav-item-1'];
@@ -52,3 +55,26 @@ navigation[3].innerHTML = siteContent.nav['nav-item-4'];
 navigation[4].innerHTML = siteContent.nav['nav-item-5'];
 navigation[5].innerHTML = siteContent.nav['nav-item-6'];
 navigation.forEach(link => link.style.color = "Navy")
+
+let ctaHead = document.querySelector('.cta-text h1');
+ctaHead.innerHTML = siteContent.cta["h1"];
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.innerHTML = siteContent.cta["button"];
+
+let textContentList = document.querySelectorAll(".text-content");
+textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+let contact = document.getElementsByClassName("contact")[0];
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
