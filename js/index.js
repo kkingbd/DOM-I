@@ -54,7 +54,7 @@ navigation[2].innerHTML = siteContent.nav['nav-item-3'];
 navigation[3].innerHTML = siteContent.nav['nav-item-4'];
 navigation[4].innerHTML = siteContent.nav['nav-item-5'];
 navigation[5].innerHTML = siteContent.nav['nav-item-6'];
-navigation.forEach(link => link.style.color = "Navy")
+navigation.forEach(item => item.style.color = "green")
 
 let ctaHead = document.querySelector('.cta-text h1');
 ctaHead.innerHTML = siteContent.cta["h1"];
@@ -78,3 +78,9 @@ contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contac
 contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
 contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
 contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
+
+let footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
+footer.style.color = 'grey';
+contact.style.color = 'navy';
